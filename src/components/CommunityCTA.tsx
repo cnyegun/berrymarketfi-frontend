@@ -8,7 +8,7 @@ export default function CommunityCTA() {
           {/* Photo (reuses the forest/berry-bowl scene) */}
           <div className="relative min-h-[220px]">
             <img
-              src="/background.png"
+              src="/background.webp"
               alt="Wild blueberries in a wooden cup on the forest floor"
               className="absolute inset-0 h-full w-full object-cover object-[center_72%]"
             />

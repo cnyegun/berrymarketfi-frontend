@@ -2,18 +2,23 @@ import { Fragment } from "react";
 import { ArrowRight } from "lucide-react";
 import ImagePlaceholder from "./ImagePlaceholder";
 
-// Drop real illustrations here (e.g. "/steps/find-spot.png"); null shows a placeholder.
-const STEP_IMAGES: (string | null)[] = [null, null, null, null];
+// Drop real illustrations here; null shows a placeholder.
+const STEP_IMAGES: (string | null)[] = [
+  "/steps/1.png",
+  "/steps/2.png",
+  "/steps/3.png",
+  "/steps/4.png",
+];
 
 const STEPS = [
   {
-    title: "Find a spot",
-    desc: "Discover high-yield berry locations near you.",
+    title: "Pick a spot",
+    desc: "We provide a curated list of berries picking location.",
     label: "Map illustration",
   },
   {
     title: "Pick responsibly",
-    desc: "Harvest with care and follow sustainable picking guidelines.",
+    desc: "Be nice!",
     label: "Basket illustration",
   },
   {
@@ -33,17 +38,13 @@ export default function HowItWorks() {
     <section className="bg-[#f5f7f4] py-16 lg:py-20">
       <div className="mx-auto max-w-[1240px] px-6">
         <h2 className="text-center text-[26px] font-extrabold tracking-[-0.01em] text-ink sm:text-[30px]">
-          How Berrymarket works
+            How does it work? 
         </h2>
-        <p className="mt-3 text-center text-[15px] text-muted">
-          Simple steps from forest to market.
-        </p>
-
         <div className="mt-14 flex flex-col items-center gap-10 lg:flex-row lg:items-start lg:justify-center lg:gap-2">
           {STEPS.map((step, i) => (
             <Fragment key={step.title}>
               <div className="flex w-full max-w-[220px] flex-col items-center text-center">
-                <div className="h-28 w-28">
+                <div className="h-32 w-32 overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-black/5">
                   <ImagePlaceholder src={STEP_IMAGES[i]} label={step.label} contain />
                 </div>
                 <div className="mt-4 flex h-7 w-7 items-center justify-center rounded-full bg-brand text-[12px] font-bold text-white shadow-sm">

@@ -2,8 +2,8 @@ import { Check, ArrowRight } from "lucide-react";
 import ImagePlaceholder from "./ImagePlaceholder";
 
 // Swap with real illustrations when ready.
-const PICKER_IMAGE: string | null = null;
-const BUYER_IMAGE: string | null = null;
+const PICKER_IMAGE: string | null = "/steps/picker.png";
+const BUYER_IMAGE: string | null = "/buyer.png";
 
 const PICKER_POINTS = [
   "Find more berries",

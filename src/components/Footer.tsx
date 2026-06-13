@@ -1,9 +1,15 @@
+import { Link } from "react-router-dom";
 import { Instagram, Facebook, Linkedin, Mail, type LucideIcon } from "lucide-react";
 
-const COLUMNS = [
-  { title: "Company", links: ["About us", "Blog", "Careers"] },
-  { title: "Support", links: ["Help center", "Contact", "Safety"] },
-  { title: "Legal", links: ["Terms", "Privacy", "Cookies"] },
+type FooterLink = { label: string; to?: string };
+
+const COLUMNS: { title: string; links: FooterLink[] }[] = [
+  {
+    title: "Company",
+    links: [{ label: "About us", to: "/about" }, { label: "Blog", to: "/blog" }, { label: "Careers" }],
+  },
+  { title: "Support", links: [{ label: "Help center" }, { label: "Contact" }, { label: "Safety" }] },
+  { title: "Legal", links: [{ label: "Terms" }, { label: "Privacy" }, { label: "Cookies" }] },
 ];
 
 const SOCIALS: { icon: LucideIcon; label: string }[] = [
@@ -32,10 +38,16 @@ export default function Footer() {
               <h4 className="text-[14px] font-bold text-ink">{col.title}</h4>
               <ul className="mt-4 space-y-2.5">
                 {col.links.map((l) => (
-                  <li key={l}>
-                    <a href="#" className="text-[14px] text-muted transition-colors hover:text-brand">
-                      {l}
-                    </a>
+                  <li key={l.label}>
+                    {l.to ? (
+                      <Link to={l.to} className="text-[14px] text-muted transition-colors hover:text-brand">
+                        {l.label}
+                      </Link>
+                    ) : (
+                      <a href="#" className="text-[14px] text-muted transition-colors hover:text-brand">
+                        {l.label}
+                      </a>
+                    )}
                   </li>
                 ))}
               </ul>

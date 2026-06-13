@@ -49,8 +49,9 @@ export default function Hero() {
             {...rise(0.16)}
             className="mt-6 max-w-md text-[17px] leading-[1.7] text-muted"
           >
-            Berrymarket connects berry pickers with trusted buyers across
-            Finland. You pick. We connect. You earn.
+            Berrymarket provide you a curated list of wild berries picking location and 
+            connects berry pickers with trusted buyers across
+            Finland.
           </motion.p>
 
           {/* CTAs */}
