@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+
+  /* Brand palette sampled from the Berrymarket logo + mockup */
+  --color-ink: #17262c;
+  --color-muted: #5e6f72;
+  --color-brand: #3b7d45;
+  --color-brand-dark: #2f6a39;
+  --color-brand-soft: #eef4ee;
+  --color-navy: #143a5e;
+  --color-line: #e4e8e6;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  background: #ffffff;
+  color: var(--color-ink);
+}
+
+/* Keep the hero feeling like one full screen on large displays */
+::selection {
+  background: var(--color-brand);
+  color: #fff;
+}
