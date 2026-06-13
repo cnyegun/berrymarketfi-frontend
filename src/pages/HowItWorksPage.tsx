@@ -25,25 +25,25 @@ const STEPS = [
   },
 ];
 
-const H2 = "mt-14 text-[24px] font-bold tracking-[-0.01em] text-ink sm:text-[28px]";
-const P = "mt-5 text-[17px] leading-[1.75] text-muted";
+const H2 = "mt-14 text-[28px] font-bold tracking-[-0.01em] text-ink sm:text-[32px]";
+const P = "mt-5 text-[20px] leading-[1.75] text-muted";
 
 export default function HowItWorksPage() {
   return (
     <PageLayout>
       {/* Article header */}
       <header className="mx-auto max-w-[760px] px-6 pt-12 pb-8 text-center lg:pt-16">
-        <h1 className="text-[34px] font-extrabold leading-[1.08] tracking-[-0.02em] text-ink sm:text-[46px]">
+        <h1 className="text-[39px] font-extrabold leading-[1.08] tracking-[-0.02em] text-ink sm:text-[53px]">
           How Berrymarket works
         </h1>
-        <p className="mt-5 text-[18px] leading-relaxed text-muted">
+        <p className="mt-5 text-[21px] leading-relaxed text-muted">
           Each summer, Finland's quiet forests offer up hundreds of millions of kilos of
           wild berries — and, almost unnoticed, most of them are simply left behind. This
           is the story of how we bring together the people who pick and the people
           who buy: openly, fairly, and without a single middleman slipping away with the
           forest's share.
         </p>
-        <div className="mt-6 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-[13px] text-muted">
+        <div className="mt-6 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-[15px] text-muted">
           <span className="font-semibold text-ink">The Berrymarket Team</span>
           <span aria-hidden>·</span>
           <span>Updated June 2026</span>
@@ -104,7 +104,7 @@ export default function HowItWorksPage() {
         </p>
 
         <figure className="my-12 border-l-4 border-brand pl-6">
-          <blockquote className="text-[22px] font-semibold leading-snug tracking-[-0.01em] text-ink">
+          <blockquote className="text-[25px] font-semibold leading-snug tracking-[-0.01em] text-ink">
             “A picker earns only about €2.39 for a kilo of bilberries that later sells,
             downstream, for more than €13. Selling directly closes that quiet,
             unfair gap.”
@@ -126,13 +126,13 @@ export default function HowItWorksPage() {
             >
               <div className="relative h-24 w-24 shrink-0 self-center overflow-hidden rounded-2xl bg-white ring-1 ring-black/5 sm:self-start">
                 <img src={step.img} alt="" className="h-full w-full object-contain" />
-                <span className="absolute left-2 top-2 flex h-6 w-6 items-center justify-center rounded-full bg-brand text-[12px] font-bold text-white">
+                <span className="absolute left-2 top-2 flex h-6 w-6 items-center justify-center rounded-full bg-brand text-[14px] font-bold text-white">
                   {i + 1}
                 </span>
               </div>
               <div>
-                <h3 className="text-[18px] font-bold text-ink">{step.title}</h3>
-                <p className="mt-2 text-[15.5px] leading-relaxed text-muted">{step.body}</p>
+                <h3 className="text-[21px] font-bold text-ink">{step.title}</h3>
+                <p className="mt-2 text-[18px] leading-relaxed text-muted">{step.body}</p>
               </div>
             </div>
           ))}
@@ -155,7 +155,7 @@ export default function HowItWorksPage() {
           proud of.
         </p>
 
-        <p className="mt-12 border-t border-line pt-5 text-[13px] leading-relaxed text-muted/80">
+        <p className="mt-12 border-t border-line pt-5 text-[15px] leading-relaxed text-muted/80">
           Picker prices, volumes and revenues are from MARSI 2025 by Ruokavirasto / Kantar Agri.
         </p>
       </article>
@@ -163,24 +163,24 @@ export default function HowItWorksPage() {
       {/* CTA */}
       <section className="mx-auto max-w-[1080px] px-6 pb-20 pt-6">
         <div className="rounded-3xl bg-[#f3efe3] px-8 py-12 text-center lg:px-16">
-          <h2 className="text-[26px] font-extrabold tracking-[-0.01em] text-ink sm:text-[30px]">
+          <h2 className="text-[30px] font-extrabold tracking-[-0.01em] text-ink sm:text-[34px]">
             Find. Sell. Buy. All in one place.
           </h2>
-          <p className="mx-auto mt-4 max-w-md text-[16px] leading-relaxed text-muted">
+          <p className="mx-auto mt-4 max-w-md text-[18px] leading-relaxed text-muted">
             Come and join the warm, growing community turning Finland's forests into
             fair, local value.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <a
               href="#"
-              className="inline-flex items-center gap-2.5 rounded-xl bg-brand px-6 py-3.5 text-[15px] font-semibold text-white shadow-sm transition-all hover:-translate-y-0.5 hover:bg-brand-dark"
+              className="inline-flex items-center gap-2.5 rounded-xl bg-brand px-6 py-3.5 text-[17px] font-semibold text-white shadow-sm transition-all hover:-translate-y-0.5 hover:bg-brand-dark"
             >
               Sign up as a picker
               <Sprout size={19} strokeWidth={2} />
             </a>
             <Link
               to="/pricing"
-              className="inline-flex items-center gap-2.5 rounded-xl border border-ink/15 bg-white px-6 py-3.5 text-[15px] font-semibold text-ink transition-all hover:-translate-y-0.5 hover:border-ink/30"
+              className="inline-flex items-center gap-2.5 rounded-xl border border-ink/15 bg-white px-6 py-3.5 text-[17px] font-semibold text-ink transition-all hover:-translate-y-0.5 hover:border-ink/30"
             >
               See pricing
               <ShoppingBasket size={19} strokeWidth={2} className="text-brand" />

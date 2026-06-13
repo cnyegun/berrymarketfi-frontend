@@ -27,7 +27,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="col-span-2 sm:col-span-3 md:col-span-1">
             <img src="/logo.png" alt="Berrymarket" className="h-9 w-auto" />
-            <p className="mt-4 max-w-[210px] text-[13.5px] leading-relaxed text-muted">
+            <p className="mt-4 max-w-[210px] text-[16px] leading-relaxed text-muted">
               Building the bridge between nature and value.
             </p>
           </div>
@@ -35,16 +35,16 @@ export default function Footer() {
           {/* Link columns */}
           {COLUMNS.map((col) => (
             <div key={col.title}>
-              <h4 className="text-[14px] font-bold text-ink">{col.title}</h4>
+              <h4 className="text-[16px] font-bold text-ink">{col.title}</h4>
               <ul className="mt-4 space-y-2.5">
                 {col.links.map((l) => (
                   <li key={l.label}>
                     {l.to ? (
-                      <Link to={l.to} className="text-[14px] text-muted transition-colors hover:text-brand">
+                      <Link to={l.to} className="text-[16px] text-muted transition-colors hover:text-brand">
                         {l.label}
                       </Link>
                     ) : (
-                      <a href="#" className="text-[14px] text-muted transition-colors hover:text-brand">
+                      <a href="#" className="text-[16px] text-muted transition-colors hover:text-brand">
                         {l.label}
                       </a>
                     )}
@@ -56,7 +56,7 @@ export default function Footer() {
 
           {/* Social */}
           <div>
-            <h4 className="text-[14px] font-bold text-ink">Follow us</h4>
+            <h4 className="text-[16px] font-bold text-ink">Follow us</h4>
             <div className="mt-4 flex gap-2.5">
               {SOCIALS.map(({ icon: Icon, label }) => (
                 <a

@@ -3,6 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
 const NAV_LINKS = [
+  { label: "Home", to: "/", end: true },
   { label: "How it works", to: "/how-it-works" },
   { label: "Pricing", to: "/pricing" },
   { label: "Blog", to: "/blog" },
@@ -38,8 +39,9 @@ export default function Navbar({ variant = "overlay" }: { variant?: "overlay" | 
             <li key={item.to}>
               <NavLink
                 to={item.to}
+                end={item.end}
                 className={({ isActive }) =>
-                  `block px-5 py-4 text-[15px] font-medium transition-colors duration-200 hover:text-brand ${
+                  `block px-5 py-4 text-[17px] font-medium transition-colors duration-200 hover:text-brand ${
                     isActive ? "text-brand" : "text-ink/80"
                   }`
                 }
@@ -54,7 +56,7 @@ export default function Navbar({ variant = "overlay" }: { variant?: "overlay" | 
         <div className="hidden items-center lg:flex">
           <a
             href="#"
-            className="rounded-[10px] bg-brand px-6 py-2.5 text-[15px] font-semibold text-white shadow-sm transition-colors hover:bg-brand-dark"
+            className="rounded-[10px] bg-brand px-6 py-2.5 text-[17px] font-semibold text-white shadow-sm transition-colors hover:bg-brand-dark"
           >
             Sign up
           </a>
@@ -79,9 +81,10 @@ export default function Navbar({ variant = "overlay" }: { variant?: "overlay" | 
               <li key={item.to}>
                 <NavLink
                   to={item.to}
+                  end={item.end}
                   onClick={() => setOpen(false)}
                   className={({ isActive }) =>
-                    `block rounded-lg px-3 py-2.5 text-[15px] font-medium hover:bg-brand-soft hover:text-brand ${
+                    `block rounded-lg px-3 py-2.5 text-[17px] font-medium hover:bg-brand-soft hover:text-brand ${
                       isActive ? "text-brand" : "text-ink/80"
                     }`
                   }
@@ -94,7 +97,7 @@ export default function Navbar({ variant = "overlay" }: { variant?: "overlay" | 
           <div className="mt-3 border-t border-line pt-3">
             <a
               href="#"
-              className="block rounded-[10px] bg-brand px-5 py-2.5 text-center text-[15px] font-semibold text-white"
+              className="block rounded-[10px] bg-brand px-5 py-2.5 text-center text-[17px] font-semibold text-white"
             >
               Sign up
             </a>

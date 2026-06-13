@@ -1,7 +1,9 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  /* Editorial serif pairing: Newsreader for reading, Fraunces for display */
+  --font-sans: "Newsreader", Georgia, Cambria, "Times New Roman", serif;
+  --font-display: "Fraunces", "Newsreader", Georgia, serif;
 
   /* Brand palette sampled from the Berrymarket logo + mockup */
   --color-ink: #17262c;
@@ -20,10 +22,20 @@ html {
 body {
   margin: 0;
   font-family: var(--font-sans);
+  font-optical-sizing: auto;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   background: #ffffff;
   color: var(--color-ink);
+}
+
+/* Headings wear Fraunces — characterful, slightly soft + wonky old-style serif.
+   :where() keeps specificity at 0 so font-weight utilities still win. */
+:where(h1, h2, h3, h4, h5, h6) {
+  font-family: var(--font-display);
+  font-optical-sizing: auto;
+  font-variation-settings: "SOFT" 28, "WONK" 1;
+  letter-spacing: -0.015em;
 }
 
 /* Keep the hero feeling like one full screen on large displays */

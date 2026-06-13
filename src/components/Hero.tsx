@@ -38,16 +38,16 @@ export default function Hero() {
         <div className="max-w-xl">
           <motion.h1
             {...rise(0.05)}
-            className="text-[44px] font-extrabold leading-[1.05] tracking-[-0.02em] text-ink sm:text-[56px] lg:text-[64px]"
+            className="text-[44px] font-extrabold leading-[1.05] tracking-[-0.02em] text-ink sm:text-[56px] lg:text-[64px] lg:whitespace-nowrap"
           >
-            Find <span className="text-brand">wild berries.</span>
+            Find <span className="italic text-brand">wild berries.</span>
             <br />
             Earn naturally.
           </motion.h1>
 
           <motion.p
             {...rise(0.16)}
-            className="mt-6 max-w-md text-[17px] leading-[1.7] text-muted"
+            className="mt-6 max-w-md text-[20px] leading-[1.7] text-muted"
           >
             Berrymarket provide you a curated list of wild berries picking location and 
             connects berry pickers with trusted buyers across
@@ -58,14 +58,14 @@ export default function Hero() {
           <motion.div {...rise(0.27)} className="mt-9 flex flex-wrap gap-4">
             <a
               href="#"
-              className="group inline-flex items-center gap-2.5 rounded-xl bg-brand px-6 py-3.5 text-[15px] font-semibold text-white shadow-[0_10px_24px_-10px_rgba(47,106,57,0.7)] transition-all hover:-translate-y-0.5 hover:bg-brand-dark"
+              className="group inline-flex items-center gap-2.5 rounded-xl bg-brand px-6 py-3.5 text-[17px] font-semibold text-white shadow-[0_10px_24px_-10px_rgba(47,106,57,0.7)] transition-all hover:-translate-y-0.5 hover:bg-brand-dark"
             >
               I want to pick berries
               <Sprout size={19} strokeWidth={2} className="transition-transform group-hover:rotate-6" />
             </a>
             <a
               href="#"
-              className="group inline-flex items-center gap-2.5 rounded-xl border border-ink/15 bg-white/80 px-6 py-3.5 text-[15px] font-semibold text-ink backdrop-blur-sm transition-all hover:-translate-y-0.5 hover:border-ink/30 hover:bg-white"
+              className="group inline-flex items-center gap-2.5 rounded-xl border border-ink/15 bg-white/80 px-6 py-3.5 text-[17px] font-semibold text-ink backdrop-blur-sm transition-all hover:-translate-y-0.5 hover:border-ink/30 hover:bg-white"
             >
               I want to buy berries
               <ShoppingBasket size={19} strokeWidth={2} className="text-brand" />
@@ -74,7 +74,7 @@ export default function Hero() {
 
           {/* App store badges */}
           <motion.div {...rise(0.36)} className="mt-5">
-            {/* <p className="mb-2.5 text-[13px] font-medium text-muted">Get the Berrymarket app</p> */}
+            {/* <p className="mb-2.5 text-[15px] font-medium text-muted">Get the Berrymarket app</p> */}
             <StoreBadges />
           </motion.div>
 
@@ -83,8 +83,8 @@ export default function Hero() {
             {FEATURES.map(({ icon: Icon, title, subtitle }) => (
               <li key={title} className="flex flex-1 flex-col items-center text-center">
                 <Icon size={30} strokeWidth={1.4} className="text-ink/80" />
-                <p className="mt-3 text-[15px] font-bold text-ink">{title}</p>
-                <p className="mt-1 text-[13px] leading-snug text-muted">{subtitle}</p>
+                <p className="mt-3 text-[17px] font-bold text-ink">{title}</p>
+                <p className="mt-1 text-[15px] leading-snug text-muted">{subtitle}</p>
               </li>
             ))}
           </motion.ul>

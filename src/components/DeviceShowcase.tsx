@@ -11,7 +11,7 @@ function ScreenPlaceholder() {
   return (
     <div className="flex h-full w-full flex-col items-center justify-center gap-3 bg-[linear-gradient(135deg,#eef4ee_0%,#ffffff_45%,#e8f1ea_100%)]">
       <img src="/favicon.png" alt="" className="h-12 w-12 opacity-50" />
-      <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-brand/70">
+      <span className="text-[14px] font-semibold text-brand/70">
         App screenshot
       </span>
     </div>

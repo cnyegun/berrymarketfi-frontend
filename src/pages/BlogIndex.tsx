@@ -26,7 +26,7 @@ function Cover({ post }: { post: Post }) {
 
 function Meta({ post }: { post: Post }) {
   return (
-    <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-[12.5px] text-muted">
+    <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-[14px] text-muted">
       <span className="rounded-full bg-brand-soft px-2.5 py-1 font-semibold text-brand-dark">
         {post.category}
       </span>
@@ -44,10 +44,10 @@ export default function BlogIndex() {
     <PageLayout>
       {/* Header */}
       <header className="mx-auto max-w-[820px] px-6 pt-12 pb-10 text-center lg:pt-16">
-        <h1 className="text-[34px] font-extrabold leading-[1.08] tracking-[-0.02em] text-ink sm:text-[46px]">
+        <h1 className="text-[39px] font-extrabold leading-[1.08] tracking-[-0.02em] text-ink sm:text-[53px]">
           The Berrymarket Journal
         </h1>
-        <p className="mt-5 text-[18px] leading-relaxed text-muted">
+        <p className="mt-5 text-[21px] leading-relaxed text-muted">
           Field notes, thoughtful guides and quiet stories from Finland's forests — for the
           people who pick, the people who buy, and everyone who simply loves a good berry.
         </p>
@@ -64,11 +64,11 @@ export default function BlogIndex() {
           </div>
           <div className="flex flex-col justify-center p-8 lg:p-10">
             <Meta post={featured} />
-            <h2 className="mt-4 text-[26px] font-extrabold leading-[1.15] tracking-[-0.01em] text-ink sm:text-[30px]">
+            <h2 className="mt-4 text-[30px] font-extrabold leading-[1.15] tracking-[-0.01em] text-ink sm:text-[34px]">
               {featured.title}
             </h2>
-            <p className="mt-4 text-[16px] leading-relaxed text-muted">{featured.excerpt}</p>
-            <span className="mt-6 inline-flex items-center gap-1.5 text-[15px] font-semibold text-brand transition-all group-hover:gap-2.5">
+            <p className="mt-4 text-[18px] leading-relaxed text-muted">{featured.excerpt}</p>
+            <span className="mt-6 inline-flex items-center gap-1.5 text-[17px] font-semibold text-brand transition-all group-hover:gap-2.5">
               Read the story <ArrowRight size={16} />
             </span>
           </div>
@@ -89,13 +89,13 @@ export default function BlogIndex() {
               </div>
               <div className="flex flex-1 flex-col p-6">
                 <Meta post={post} />
-                <h3 className="mt-3 text-[19px] font-bold leading-snug tracking-[-0.01em] text-ink">
+                <h3 className="mt-3 text-[22px] font-bold leading-snug tracking-[-0.01em] text-ink">
                   {post.title}
                 </h3>
-                <p className="mt-2.5 flex-1 text-[14.5px] leading-relaxed text-muted">
+                <p className="mt-2.5 flex-1 text-[17px] leading-relaxed text-muted">
                   {post.excerpt}
                 </p>
-                <span className="mt-5 inline-flex items-center gap-1.5 text-[14px] font-semibold text-brand transition-all group-hover:gap-2.5">
+                <span className="mt-5 inline-flex items-center gap-1.5 text-[16px] font-semibold text-brand transition-all group-hover:gap-2.5">
                   Read more <ArrowRight size={15} />
                 </span>
               </div>

@@ -37,7 +37,7 @@ export default function HowItWorks() {
   return (
     <section className="bg-[#f5f7f4] py-16 lg:py-20">
       <div className="mx-auto max-w-[1240px] px-6">
-        <h2 className="text-center text-[26px] font-extrabold tracking-[-0.01em] text-ink sm:text-[30px]">
+        <h2 className="text-center text-[30px] font-extrabold tracking-[-0.01em] text-ink sm:text-[34px]">
             How does it work? 
         </h2>
         <div className="mt-14 flex flex-col items-center gap-10 lg:flex-row lg:items-start lg:justify-center lg:gap-2">
@@ -47,11 +47,11 @@ export default function HowItWorks() {
                 <div className="h-32 w-32 overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-black/5">
                   <ImagePlaceholder src={STEP_IMAGES[i]} label={step.label} contain />
                 </div>
-                <div className="mt-4 flex h-7 w-7 items-center justify-center rounded-full bg-brand text-[12px] font-bold text-white shadow-sm">
+                <div className="mt-4 flex h-7 w-7 items-center justify-center rounded-full bg-brand text-[14px] font-bold text-white shadow-sm">
                   {i + 1}
                 </div>
-                <h3 className="mt-3 text-[15.5px] font-bold text-ink">{step.title}</h3>
-                <p className="mt-1.5 text-[13px] leading-snug text-muted">{step.desc}</p>
+                <h3 className="mt-3 text-[18px] font-bold text-ink">{step.title}</h3>
+                <p className="mt-1.5 text-[15px] leading-snug text-muted">{step.desc}</p>
               </div>
               {i < STEPS.length - 1 && (
                 <ArrowRight

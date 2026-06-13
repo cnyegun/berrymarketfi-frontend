@@ -24,7 +24,7 @@ export default function ImagePlaceholder({ src, label, contain = false, classNam
       className={`flex h-full w-full flex-col items-center justify-center gap-2 rounded-2xl bg-[linear-gradient(135deg,#eef4ee_0%,#ffffff_50%,#e8f1ea_100%)] ${className}`}
     >
       <img src="/favicon.png" alt="" className="h-7 w-7 opacity-40" />
-      <span className="px-3 text-center text-[9px] font-semibold uppercase tracking-[0.16em] text-brand/60">
+      <span className="px-3 text-center text-[12px] font-semibold text-brand/60">
         {label}
       </span>
     </div>

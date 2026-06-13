@@ -7,20 +7,20 @@ function renderBlock(block: Block, i: number) {
   switch (block.type) {
     case "h2":
       return (
-        <h2 key={i} className="mt-12 text-[23px] font-bold tracking-[-0.01em] text-ink sm:text-[27px]">
+        <h2 key={i} className="mt-12 text-[26px] font-bold tracking-[-0.01em] text-ink sm:text-[31px]">
           {block.text}
         </h2>
       );
     case "p":
       return (
-        <p key={i} className="mt-5 text-[17px] leading-[1.8] text-muted">
+        <p key={i} className="mt-5 text-[20px] leading-[1.8] text-muted">
           {block.text}
         </p>
       );
     case "quote":
       return (
         <figure key={i} className="my-10 border-l-4 border-brand pl-6">
-          <blockquote className="text-[21px] font-semibold leading-snug tracking-[-0.01em] text-ink">
+          <blockquote className="text-[24px] font-semibold leading-snug tracking-[-0.01em] text-ink">
             “{block.text}”
           </blockquote>
         </figure>
@@ -29,7 +29,7 @@ function renderBlock(block: Block, i: number) {
       return (
         <ul key={i} className="mt-5 space-y-3">
           {block.items.map((item) => (
-            <li key={item} className="flex items-start gap-3 text-[17px] leading-[1.7] text-muted">
+            <li key={item} className="flex items-start gap-3 text-[20px] leading-[1.7] text-muted">
               <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand" />
               {item}
             </li>
@@ -61,15 +61,15 @@ export default function BlogPost() {
     return (
       <PageLayout>
         <div className="mx-auto max-w-[640px] px-6 py-28 text-center">
-          <h1 className="text-[30px] font-extrabold tracking-[-0.01em] text-ink">
+          <h1 className="text-[34px] font-extrabold tracking-[-0.01em] text-ink">
             We couldn't find that story
           </h1>
-          <p className="mt-4 text-[16px] leading-relaxed text-muted">
+          <p className="mt-4 text-[18px] leading-relaxed text-muted">
             It may have wandered off into the forest. Let's get you back to the journal.
           </p>
           <Link
             to="/blog"
-            className="mt-8 inline-flex items-center gap-2 rounded-xl bg-brand px-6 py-3.5 text-[15px] font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-brand-dark"
+            className="mt-8 inline-flex items-center gap-2 rounded-xl bg-brand px-6 py-3.5 text-[17px] font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-brand-dark"
           >
             <ArrowLeft size={17} /> Back to the journal
           </Link>
@@ -86,17 +86,17 @@ export default function BlogPost() {
       <header className="mx-auto max-w-[760px] px-6 pt-12 pb-8 text-center lg:pt-16">
         <Link
           to="/blog"
-          className="inline-flex items-center gap-1.5 text-[13px] font-semibold text-brand transition-all hover:gap-2.5"
+          className="inline-flex items-center gap-1.5 text-[15px] font-semibold text-brand transition-all hover:gap-2.5"
         >
           <ArrowLeft size={15} /> The Berrymarket Journal
         </Link>
-        <p className="mt-6 text-[13px] font-bold uppercase tracking-[0.16em] text-brand">
+        <p className="mt-6 text-[16px] font-semibold italic text-brand">
           {post.category}
         </p>
-        <h1 className="mt-3 text-[32px] font-extrabold leading-[1.1] tracking-[-0.02em] text-ink sm:text-[42px]">
+        <h1 className="mt-3 text-[37px] font-extrabold leading-[1.1] tracking-[-0.02em] text-ink sm:text-[48px]">
           {post.title}
         </h1>
-        <div className="mt-6 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-[13px] text-muted">
+        <div className="mt-6 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-[15px] text-muted">
           <span className="font-semibold text-ink">{post.author}</span>
           <span aria-hidden>·</span>
           <time dateTime={post.date}>{post.dateLabel}</time>
@@ -109,7 +109,7 @@ export default function BlogPost() {
       <figure className="mx-auto max-w-[1080px] px-6">
         <Banner post={post} />
         {post.credit && (
-          <figcaption className="mt-2 px-1 text-right text-[12px] text-muted/70">
+          <figcaption className="mt-2 px-1 text-right text-[14px] text-muted/70">
             Photo: {post.credit.author} ·{" "}
             <a
               href={post.credit.source}
@@ -132,7 +132,7 @@ export default function BlogPost() {
       {/* Keep reading */}
       <section className="mx-auto max-w-[1080px] px-6 pb-20 pt-8">
         <div className="border-t border-line pt-10">
-          <h2 className="text-[22px] font-extrabold tracking-[-0.01em] text-ink">Keep reading</h2>
+          <h2 className="text-[25px] font-extrabold tracking-[-0.01em] text-ink">Keep reading</h2>
           <div className="mt-6 grid gap-6 sm:grid-cols-2">
             {more.map((p) => (
               <Link
@@ -150,17 +150,17 @@ export default function BlogPost() {
                   )}
                 </div>
                 <div>
-                  <p className="text-[11px] font-semibold uppercase tracking-wide text-brand">
+                  <p className="text-[14px] font-semibold italic text-brand">
                     {p.category}
                   </p>
-                  <p className="mt-1 text-[15px] font-bold leading-snug text-ink">{p.title}</p>
+                  <p className="mt-1 text-[17px] font-bold leading-snug text-ink">{p.title}</p>
                 </div>
               </Link>
             ))}
           </div>
           <Link
             to="/blog"
-            className="mt-8 inline-flex items-center gap-1.5 text-[15px] font-semibold text-brand transition-all hover:gap-2.5"
+            className="mt-8 inline-flex items-center gap-1.5 text-[17px] font-semibold text-brand transition-all hover:gap-2.5"
           >
             See all stories <ArrowRight size={16} />
           </Link>
