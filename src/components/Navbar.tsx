@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
-const NAV_LINKS = ["How it works", "For Pickers", "For Buyers", "Pricing", "About us"];
+const NAV_LINKS = ["How it works", "Pricing", "About us"];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -11,16 +11,16 @@ export default function Navbar() {
       <nav className="mx-auto flex max-w-[1240px] items-center justify-between px-6 py-5">
         {/* Logo */}
         <a href="#" className="flex shrink-0 items-center" aria-label="Berrymarket home">
-          <img src="/logo.png" alt="Berrymarket" className="h-10 w-auto sm:h-12" />
+          <img src="/logo.png" alt="Berrymarket" className="h-12 w-auto sm:h-16" />
         </a>
 
         {/* Desktop nav links */}
-        <ul className="hidden items-center gap-9 lg:flex">
+        <ul className="hidden items-center gap-1 lg:flex">
           {NAV_LINKS.map((item) => (
             <li key={item}>
               <a
                 href="#"
-                className="text-[15px] font-medium text-ink/80 transition-colors hover:text-brand"
+                className="block px-5 py-4 text-[15px] font-medium text-ink/80 transition-colors duration-200 hover:text-brand"
               >
                 {item}
               </a>
@@ -28,14 +28,8 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* Desktop actions */}
-        <div className="hidden items-center gap-3 lg:flex">
-          <a
-            href="#"
-            className="rounded-[10px] border border-ink/15 bg-white/60 px-5 py-2.5 text-[15px] font-semibold text-ink backdrop-blur-sm transition-colors hover:border-ink/35 hover:bg-white"
-          >
-            Log in
-          </a>
+        {/* Desktop action */}
+        <div className="hidden items-center lg:flex">
           <a
             href="#"
             className="rounded-[10px] bg-brand px-6 py-2.5 text-[15px] font-semibold text-white shadow-sm transition-colors hover:bg-brand-dark"
@@ -70,16 +64,10 @@ export default function Navbar() {
               </li>
             ))}
           </ul>
-          <div className="mt-3 flex gap-3 border-t border-line pt-3">
+          <div className="mt-3 border-t border-line pt-3">
             <a
               href="#"
-              className="flex-1 rounded-[10px] border border-ink/15 px-5 py-2.5 text-center text-[15px] font-semibold text-ink"
-            >
-              Log in
-            </a>
-            <a
-              href="#"
-              className="flex-1 rounded-[10px] bg-brand px-5 py-2.5 text-center text-[15px] font-semibold text-white"
+              className="block rounded-[10px] bg-brand px-5 py-2.5 text-center text-[15px] font-semibold text-white"
             >
               Sign up
             </a>
