@@ -1,7 +1,5 @@
 import { motion } from "motion/react";
 import {
-  Sprout,
-  ShoppingBasket,
   Leaf,
   ShieldCheck,
   HandHeart,
@@ -54,26 +52,8 @@ export default function Hero() {
             Finland.
           </motion.p>
 
-          {/* CTAs */}
-          <motion.div {...rise(0.27)} className="mt-9 flex flex-wrap gap-4">
-            <a
-              href="#"
-              className="group inline-flex items-center gap-2.5 rounded-xl bg-brand px-6 py-3.5 text-[17px] font-semibold text-white shadow-[0_10px_24px_-10px_rgba(47,106,57,0.7)] transition-all hover:-translate-y-0.5 hover:bg-brand-dark"
-            >
-              I want to pick berries
-              <Sprout size={19} strokeWidth={2} className="transition-transform group-hover:rotate-6" />
-            </a>
-            <a
-              href="#"
-              className="group inline-flex items-center gap-2.5 rounded-xl border border-ink/15 bg-white/80 px-6 py-3.5 text-[17px] font-semibold text-ink backdrop-blur-sm transition-all hover:-translate-y-0.5 hover:border-ink/30 hover:bg-white"
-            >
-              I want to buy berries
-              <ShoppingBasket size={19} strokeWidth={2} className="text-brand" />
-            </a>
-          </motion.div>
-
           {/* App store badges */}
-          <motion.div {...rise(0.36)} className="mt-5">
+          <motion.div {...rise(0.27)} className="mt-8">
             {/* <p className="mb-2.5 text-[15px] font-medium text-muted">Get the Berrymarket app</p> */}
             <StoreBadges />
           </motion.div>
