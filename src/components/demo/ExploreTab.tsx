@@ -57,9 +57,7 @@ function RecordDetail({ rec, onClose }: { rec: BerryRecord; onClose: () => void 
           />
           <div>
             <div className="text-[16px] font-bold leading-tight text-ink">{sp.fi}</div>
-            <div className="text-[13px] text-muted">
-              {sp.en} · <span className="italic">{sp.scientific}</span>
-            </div>
+            <div className="text-[13px] text-muted">{sp.en}</div>
           </div>
         </div>
         <button

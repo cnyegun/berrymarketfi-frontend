@@ -9,7 +9,7 @@ const COLUMNS: { title: string; links: FooterLink[] }[] = [
     links: [{ label: "About us", to: "/about" }, { label: "Blog", to: "/blog" }, { label: "Careers" }],
   },
   { title: "Support", links: [{ label: "Help center" }, { label: "Contact" }, { label: "Safety" }] },
-  { title: "Legal", links: [{ label: "Terms" }, { label: "Privacy" }, { label: "Cookies" }] },
+  { title: "Legal", links: [{ label: "Terms" }, { label: "Privacy", to: "/privacy" }, { label: "Cookies" }] },
 ];
 
 const SOCIALS: { icon: LucideIcon; label: string }[] = [

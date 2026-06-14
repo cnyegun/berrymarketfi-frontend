@@ -32,7 +32,6 @@ function popupHtml(rec: BerryRecord): string {
       <span class="berry-popup__dot" style="background:${sp.color}"></span>
       <span><strong>${esc(sp.fi)}</strong> · ${esc(sp.en)}</span>
     </div>
-    <div class="berry-popup__sci">${esc(sp.scientific)}</div>
     <table class="berry-popup__meta">
       <tr><th>Place</th><td>${esc(rec.place) || "—"}</td></tr>
       <tr><th>Accuracy</th><td>${acc}</td></tr>
