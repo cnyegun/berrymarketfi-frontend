@@ -1,37 +1,41 @@
+import { useEffect, useState } from "react";
+
 /**
  * iPhone mockup for the hero.
  *
- * The phone screen is a PLACEHOLDER for now. When you have the app
- * screenshot, drop the file into /public (e.g. /public/phone.png) and
- * set PHONE_SCREENSHOT below — the frame and sizing stay as-is.
+ * The screen cross-fades between the app screenshots below every few
+ * seconds. Screens are 617×1280, so the frame aspect matches that ratio
+ * and the images fill it edge-to-edge with no cropping.
  */
-const PHONE_SCREENSHOT: string | null = null; // e.g. "/phone.png"
-
-function ScreenPlaceholder() {
-  return (
-    <div className="flex h-full w-full flex-col items-center justify-center gap-3 bg-[linear-gradient(135deg,#eef4ee_0%,#ffffff_45%,#e8f1ea_100%)]">
-      <img src="/favicon.png" alt="" className="h-12 w-12 opacity-50" />
-      <span className="text-[14px] font-semibold text-brand/70">
-        App screenshot
-      </span>
-    </div>
-  );
-}
+const SCREENS = ["/map.jpg", "/sell.jpg", "/chat.jpg"];
+const INTERVAL_MS = 5000;
 
 export default function DeviceShowcase() {
+  const [active, setActive] = useState(0);
+
+  useEffect(() => {
+    const id = setInterval(
+      () => setActive((i) => (i + 1) % SCREENS.length),
+      INTERVAL_MS
+    );
+    return () => clearInterval(id);
+  }, []);
+
   return (
     <div className="flex justify-center">
       <div className="w-[240px] sm:w-[270px] lg:w-[300px]">
         {/* iPhone frame */}
         <div className="rounded-[3rem] bg-[#0e0f11] p-[7px] shadow-[0_45px_90px_-25px_rgba(20,40,30,0.55)] ring-1 ring-black/5">
-          <div className="relative aspect-[9/19.3] overflow-hidden rounded-[2.55rem] bg-white">
-            {/* Dynamic island */}
-            <div className="absolute left-1/2 top-2.5 z-10 h-[22px] w-[32%] -translate-x-1/2 rounded-full bg-[#0e0f11]" />
-            {PHONE_SCREENSHOT ? (
-              <img src={PHONE_SCREENSHOT} alt="Berrymarket app" className="h-full w-full object-cover" />
-            ) : (
-              <ScreenPlaceholder />
-            )}
+          <div className="relative aspect-[617/1280] overflow-hidden rounded-[2.55rem] bg-white">
+            {SCREENS.map((src, i) => (
+              <img
+                key={src}
+                src={src}
+                alt="Berrymarket app"
+                className="absolute inset-0 h-full w-full object-cover transition-opacity duration-700 ease-in-out"
+                style={{ opacity: i === active ? 1 : 0 }}
+              />
+            ))}
           </div>
         </div>
       </div>
